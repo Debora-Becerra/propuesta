@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-bottom: 80px; /* Ajusta el valor según sea necesario */
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* Asegura que la barra de navegación esté por encima del contenido */
+}
+
+#main-content {
+    text-align: center;
+    animation: fadeInSlide 2s ease-out forwards;
+    opacity: 0;
+}
+
+#main-content h1 {
+    margin-bottom: 50px;
+}
+
+#main-content button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*ESTILO DE BOTONES*/
+#main-content button {
+    padding: 10px 20px;
+    border: 2px solid #ffffff; /* Añade un borde alrededor del botón */
+    border-radius: 5px;
+    background-color: #008FC3;
+    color: #F3F3F2;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Añade un sombreado al botón */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Añade un sombreado al texto */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#main-content button:hover {
+    background-color: #FBBE37;
+    transform: translateY(-2px); /* Mueve el botón un poco hacia arriba al pasar el ratón por encima */
+}
+
+#main-content button:active {
+    transform: translateY(0); /* Mueve el botón de vuelta a su posición original al hacer clic */
+}
+
+/*ESPACIO DE ABAJO DE LAS 2 CARDS*/
+.row {
+    margin-bottom: 20px; /* Añade un espaciado en la parte inferior de cada fila */
+}
+
+
+/*FONDO COLORES*/
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #FBBE37 50%, #008FC3 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+/*FIN DE FONDO ANIMADO*/
+/*espacio entre el navbar y la primera card*/
+.first-card {
+    margin-top: 100px; /* Ajusta este valor según sea necesario para dejar suficiente espacio */
+}
+/*Animando el menú*/
+.nav-link {
+    transition: transform 0.3s ease;
+}
+.nav-link:hover {
+    transform: translateX(10px); /* Mover el enlace hacia la derecha al pasar el cursor */
+}
+
+/*Finde animación de menú*/
+
+/*IMAGEN DE ENTREGAS EN 24HS*/
+.img-fluid-custom {
+    height: 100%;
+    width: 400px;
+}
+.card {
+    margin-bottom: 20px; /* Ajusta el valor según sea necesario */
+}
+.container-main {
+    margin-bottom: 80px; /* Ajusta el valor según sea necesario */
+}
+
+
+/*Animación a las cards de 24ha*/
+@keyframes countUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .counter {
+    animation: countUp 1.5s ease-out;
+  }
+  /*Tento de entregas 24hs*/
+  .custom-h6 {
+    font-size: 28px; /* Tamaño de fuente más grande */
+    color: #008FC3; /* Color de texto azul */
+}
+/*BENEFICIOS*/
+.container-main {
+    min-height: calc(100vh - 200px); /* Ajusta la altura del contenedor principal para dejar espacio para el footer */
+}
+/*tamaño de los gif*/
+.max-img-size {
+    max-width: 100px;
+    max-height: 150px; /* Ajusta el tamaño máximo según sea necesario */
+}
+
+/*FOOTER*/
+footer a i {
+    font-size: 24px;
+    margin-right: 15px; /* Añade espacio a la derecha de cada ícono */
+    transition: transform 0.3s ease;
+}
+
+footer a:last-child i {
+    margin-right: 0; /* Elimina el espacio a la derecha del último ícono */
+}
+
+footer a:hover i {
+    transform: scale(1.2);
+}
+
